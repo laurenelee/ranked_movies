@@ -1,3 +1,3 @@
 class MovieSerializer < ActiveModel::Serializer
-  attributes :id, :title, :rank, :year, :director
+  attributes :id, :title, :url, :picture, :stars, :synopsis, :rank
 end

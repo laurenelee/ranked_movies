@@ -3,7 +3,7 @@ before_action :set_movie_detail, only: [:show]
 # GET /movies
   def index
     @movies = Movie.all
-      render json: @movies.as_json(only:[:title, :year, :director, :rank])
+      render json: @movies.as_json(only:[:title, :url, :picture, :stars, :synopsis, :rank])
   end
 
   def show
@@ -11,7 +11,7 @@ before_action :set_movie_detail, only: [:show]
   end
     # GET /movies/1
   def show
-    render json: @movie_detail.as_json(only:[:title, :year, :director, :rank])
+    render json: @movie_detail.as_json(only:[:title, :url, :picture, :stars, :synopsis, :rank])
   end
 
   private
