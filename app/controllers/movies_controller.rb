@@ -11,7 +11,7 @@ before_action :set_movie_detail, only: [:show]
   end
     # GET /movies/1
   def show
-    render json: @movie.as_json(only:[:title, :year, :director, :rank])
+    render json: @movie_detail.as_json(only:[:title, :year, :director, :rank])
   end
 
   private
