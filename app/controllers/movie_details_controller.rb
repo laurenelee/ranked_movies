@@ -14,7 +14,10 @@ before_action :set_movie_detail, only: [:show]
 
   # POST /agency_details
   def create
-    @movie_detail = MovieDetail.new(movie_detail_params)
+    @movie_detail = MovieDetail.new(
+    title: params[:movie_detail][:title],
+    rank: params[:movie_detail][:rank]
+    )
 
     # if @movie_detail.save
     #   render json: @movie_detail, status: :created, location: @movie_detail
