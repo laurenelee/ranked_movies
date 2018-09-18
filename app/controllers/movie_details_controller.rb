@@ -18,7 +18,8 @@ before_action :set_movie_detail, only: [:show]
     title: params[:movie_detail][:title],
     rank: params[:movie_detail][:rank]
     )
-
+    @movie_detail.save
+    puts "saved!"
     # if @movie_detail.save
     #   render json: @movie_detail, status: :created, location: @movie_detail
     # else
