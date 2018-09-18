@@ -16,11 +16,11 @@ before_action :set_movie_detail, only: [:show]
   def create
     @movie_detail = MovieDetail.new(movie_detail_params)
 
-    if @movie_detail.save
-      render json: @movie_detail, status: :created, location: @movie_detail
-    else
-      render json: @movie_detail.errors, status: :unprocessable_entity
-    end
+    # if @movie_detail.save
+    #   render json: @movie_detail, status: :created, location: @movie_detail
+    # else
+    #   render json: @movie_detail.errors, status: :unprocessable_entity
+    # end
   end
 
   private
